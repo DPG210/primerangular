@@ -9,6 +9,9 @@ import { DeportesComponent } from '../components/deportescomponent/deportes.comp
 import { DeportesComponent2 } from '../components/deportesv2component/deportesv2.component';
 import { FormsBinding } from '../components/formsbinding/formsbinding.component';
 import { SumarNumerosComponent } from '../components/sumarnumeroscomponent/sumarnumeros.component';
+import { Prueba } from './components/prueba/prueba';
+import { Prueba2Component } from './components/prueba2.component/prueba2.component';
+import { TablaMultiplicarComponent } from '../components/tablamultiplicar.component/tablamultiplicar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { SumarNumerosComponent } from '../components/sumarnumeroscomponent/sumar
     DeportesComponent,
     DeportesComponent2,
     FormsBinding,
-    SumarNumerosComponent
+    SumarNumerosComponent,
+    Prueba,
+    Prueba2Component,
+    TablaMultiplicarComponent
     
   ],
   imports: [

@@ -1,0 +1,92 @@
+<div>
+    <div>
+        <h1>Tabla multiplicar Binding</h1>
+        <form #formTabla="ngForm" (ngSubmit)="generarTabla()">
+            <label for="">Numero</label>
+            <input type="number" name="cajanumero" #cajanumero="ngModel" [(ngModel)]="numero">
+            <button>Crear</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Operacion</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(resultado of numeros;track resultado; let i=$index ){
+                <tr>
+                    <td>{{numero}}*{{i}}</td>
+                    <td>{{resultado}}</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h1>Tabla multiplicar 2 Ref</h1>
+        <form #formTabla2="ngForm" (ngSubmit)="generarTabla2()">
+            <label for="">Numero</label><br>
+            <input type="number" name="cajanumero2" #cajanumero2>
+            <button>Crear</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Operacion</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(resultado of numeros2;track resultado; let i=$index ){
+                <tr>
+                    <td>{{multiplicador}}*{{i}}</td>
+                    <td>{{resultado}}</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <!-- <div> 
+    <h1>Tabla multiplicar</h1> 
+    <form #tablaForm="ngForm"> 
+        <label>Introduzca número</label> 
+        <input type="number" name="cajanumero" #cajanumero/> 
+        <button (click)="mostrarTabla()"> 
+            Tabla multiplicar 
+        </button> 
+    </form> 
+    @if (numeros.length > 0){ 
+        <table border="1" style="background-color:lightblue"> 
+            <thead> 
+                <tr> 
+                    <th>Operación</th> 
+                    <th>Resultado</th> 
+                </tr> 
+            </thead> 
+            <tbody> 
+                @for (num of numeros; track num; let i = $index){ 
+                    <tr> 
+                        <td>{{ numero }} * {{i + 1}}</td> 
+                        <td>{{ num }}</td> 
+                    </tr> 
+                } 
+            </tbody> 
+        </table>         
+    } 
+    <table border="1" *ngIf="numeros.length > 0"> 
+        <thead> 
+            <tr> 
+                <th>Operación</th> 
+                <th>Resultado</th> 
+            </tr> 
+        </thead> 
+        <tbody> 
+            <tr *ngFor="let num of numeros; let i = index"> 
+                <td>{{ numero }} * {{i + 1}}</td> 
+                <td>{{ num }}</td> 
+            </tr> 
+        </tbody> 
+    </table> 
+</div>  -->
+</div>
