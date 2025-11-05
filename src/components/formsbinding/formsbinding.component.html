@@ -1,0 +1,20 @@
+<div>
+    <h1>Formulario</h1>
+    <h3>{{mensaje}}</h3>
+    <!-- UN FORMULARIO SIEMPRE DEBE TENER UN ID DE ANGULAR
+     CON LA IGUALDAD A ngForm -->
+     <form #userFroms="ngForm" (ngSubmit)="recibirDatos()">
+        <!-- LOS CONTROLES DEBEN TENER UNA ETIQUETA ngModel APUNTANDO AL ID ANGULAR -->
+         <!-- PARA INDICAR MODEL BINDING [(ngModel="Mi modelo")] -->
+          <label for="">Nombre</label>
+          <input type="text" name="cajanombre" #cajanombre="ngModel" [(ngModel)]="user.nombre"><br>
+          <label for="">Apellido</label>
+          <input type="text" name="cajaapellido" #cajaapellido="ngModel" [(ngModel)]="user.apellidos"><br>
+          <label for="">Edad</label>
+          <input type="text" name="cajaedad" #cajaedad="ngModel" [(ngModel)]="user.edad"><br>
+          <button>Crear</button>
+     </form>
+     <h2 style="color:green">
+        Nombre: {{user.nombre}}, Apellido: {{user.apellidos}}, edad: {{user.edad}}
+     </h2>
+</div>

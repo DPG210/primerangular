@@ -6,8 +6,18 @@ import { Component, OnInit } from "@angular/core";
     templateUrl:"./hooksangular.component.html"
 })
 export class HooksAngular implements OnInit{
+    public mensaje:string;
+
     constructor(){
-        console.log("Contructor: Primer metodo de inicio de component")
+        console.log("Contructor: Primer metodo de inicio de component");
+        this.mensaje= "Hoy es miercoles";
+    }
+
+    cambiarMensaje(){
+        this.mensaje="y mañana jueves!!"
+    }
+    retornarMensaje(){
+        this.mensaje= "Hoy es miercoles";
     }
 
     ngOnInit(): void {

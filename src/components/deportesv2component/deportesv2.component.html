@@ -1,0 +1,20 @@
+<div>
+    <h1>Angular 2025</h1>
+    <ul>
+        @for (num of numeros; track num){
+            @if (num %2 ==0){
+                <li class="par">{{num}}</li>
+            }@else{
+                <li class="impar">{{num}}</li>
+            }
+        }
+    </ul>
+    <ul>
+        @for (sport of sports; track sport; let i=$index){
+            <li>index= {{i}}, {{sport}}</li>
+        }@empty{
+            <li>Sin elemento</li>
+        }
+    </ul>
+</div>
+
